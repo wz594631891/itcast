@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--//定义标签-->
+<img src="img/banner_1.jpg" id="img" alt="">
+<script>
+    //获取对象
+    //修改属性
+    //判断
+   var number=1;
+    function fun() {
+     number++;
+
+     if(number>3){
+         number=1;}
+       var img = document.getElementById("img");
+       img.src="img/banner_"+number+".jpg";
+   }
+   setInterval("fun()",3000);
+
+
+
+//定时器
+</script>
+
+</body>
+</html>

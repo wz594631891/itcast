@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script> var id= setTimeout("alert('boom~')",3000)
+clearTimeout(id)
+    // var id2= setInterval("fun()",2000);//setInterval("方法()",毫秒值)
+    var id2=setInterval(fun ,2000);
+
+ //清除定时器
+     clearInterval(id2);
+    function fun(){
+    alert("boom")
+
+}
+
+</script>
+</body>
+</html>

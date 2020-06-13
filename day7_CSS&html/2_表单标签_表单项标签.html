@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+<form action="#" method="get">
+    <!--表单项input-->
+    <lebel for="username">用户名:</lebel><input type="text" name="username" id="username" placeholder="请输入用户名">
+    密码: <input type="password" name="pswd" placeholder="请输入密码"> <br> <!--placeholder显示灰字 value默认显示黑字(可删)-->
+    性别: <input type="radio" name="gender" value="male" checked="checked">男 <!--value用来指定选中时发送的信息-->
+    <input type="radio" name="gender" value="female">女 <!--checked表示默认选中 或者单独checked --> <br>
+    爱好: <input type="checkbox" name="hobby" value="shopping">购物 <!--不指定value会发送on或不发送-->
+    <input type="checkbox" name="hobby" value="java" checked>java
+    <input type="checkbox" name="hobby" value="game">游戏 <br>
+    <input type="submit" value="提交" ><br>
+    图片:<input type="file" name="file"><br>
+    隐藏域:<input type="hidden" name="hidden" value="aaa"><br>
+    取色器:<input type="color" name="color"> <br>
+    生日: <input type="date" name="date"><br>
+    生日: <input type="datetime-local" name="birthday"><br>
+    email: <input type="email" name="e"><br>
+    <input type="button" name="btn" value="一个按钮"> <!--无法提交表单--><br>
+    <input type="image" src="img/regbtn.jpg"><br>
+<!--表单项select下拉框-->
+    <select name="select" id="">
+        <option value="">请选择</option>
+        <option value="北京">北京</option>
+        <option value="2">上海</option>
+        <option value="3" selected>陕西</option>
+    </select>
+
+    <!--textarea-->
+    <textarea name="t" cols="20" rows="15">文本域</textarea>
+</form>
+
+</body>

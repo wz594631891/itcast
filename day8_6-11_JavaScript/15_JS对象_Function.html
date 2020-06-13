@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*//    三种方式创建function对象
+//1 var 对象=new Function ("arg1","arg2","方法体")
+    var fun1=new Function("a","b","document.write(a+b)");
+
+    fun1(1,2);
+    document.write("<br>");*/
+    //2 function 方法名(形参列表){方法体}
+function fun2(a,b) {
+    document.write((a+b)+"<br>");
+
+} fun2(0,1)
+    //3 var 方法名=  function(形参列表){方法体} //X没有new
+    var fun3= function(a,b){
+    document.write((a+b)+"<br>");
+    }
+ 
+     fun3(11,2)
+    //任意个参数的和
+    //arguments 内置数组储存参数
+    function add() {
+      var sum=0;
+        for(var i= 0;i<arguments.length ;i++){
+        sum+=arguments[i];
+        }
+        return sum;
+    }
+    var s=add(1,2,3);
+    document.write(s+"<br>");
+    fun3=function(a,b){document.write((a-b)+"<br>");};//重新赋值
+    fun3(1,2);
+//Array 数组
+//三种创建方法
+var arr1=new Array(1,2,3);//var arr=new Array(元素...)
+var arr2=new Array(5);//var arr=new Array(数组长度)
+var arr3=[1,2,3]; //var arr=[元素...]
+document.write(arr1+"<br>");
+document.write(arr2+"<br>");
+document.write(arr3+"<br>");
+
+    //join链接数组默认"," push 尾部加入新元素
+    document.write("====="+"<br>");
+    document.write(arr1.join("--")+"<br>");
+   arr2.push(4);
+    document.write(arr2.join()+"<br>");
+//Date
+    //toLocaleString getTime
+var date =new Date();
+document.write(date+"<br>");
+document.write(date.toLocaleString()+"<br>");
+document.write(date.getTime()+"<br>");
+/*Fri Jun 12 2020 21:39:07 GMT+0800 (中国标准时间)
+2020/6/12 下午9:39:07
+1591969147535*/
+document.write("====="+"<br>");
+// Math Math.方法名() Math.属性
+ //floor 向下取整 ceil 向上取整 round四舍五入 Math.PI圆周率
+var r=(Math.floor(Math.random()*100))+1; //random()获取0-0.99999..随机数
+document.write(r+"<br>");//1-100随机值
+    document.write(Math.round(3.14)+"<br>");
+    document.write(Math.ceil(3.14)+"<br>");
+    document.write(Math.floor(3.14)+"<br>");
+//19 正则表达式 RegExp
+    //方法一 var 对象=new RegExp("正则表达式")
+    var reg1=new RegExp("\\w{6,12}");// 需要转义符号 /\w{6,12}/
+    var reg4=new RegExp("\w{6,12}");//   /w{6,12}/
+
+//方法二 var 对象=/正则表达式/ ^,$ 表示开始结束符号
+    var reg2=/^\w{6,12}$/;
+    var reg3=/\w{6,12}/;
+    //test(参数)校验
+   var username="zhangsan";
+document.write(reg1+"<br>");
+ var flag1=   reg1.test(username);
+    var flag2= reg3.test(username);
+    document.write(flag1+" "+flag2+"<br>");
+
+
+//Global 全局对象 无需对象化即可使用其方法 类似于静态方法 方法(参数)
+    //encodeURI() decodeURI() encodeURIComponent() decodeURIComponent 编码 解码url字符 比如中文 后面两个会将符号转为%xx%xx%
+var encode=encodeURI("传智播客");
+document.write(decodeURI(encod) +"<br
+    >");
+var encode2=encodeURICOmponent("传智播客");
+document.write(decodeURIComponent(encode2) +"<br>");
+    //isNaN 判断是否NaN
+document.write("====="+"<br>");
+ document.write(isNaN("2")+"<br>");//false
+document.write(isNaN(+"a")+"<br>");//true
+
+    //parseInt() 转换字符串为数字 逐个判断直到非数字
+var n= parseInt("234abc"); //->234
+document.write((n+1)+"<br>"); //235
+    //eval 将字符串作为代码执行
+    var jscode="document.write( 'a');"
+    eval(jscode) //a
+</script>
+
+</body>
+</html>

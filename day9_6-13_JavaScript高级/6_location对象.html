@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" id="btn" value="reload">
+<input type="button" id="goItcast" value="goItcast">
+<script>
+//window.location 方法reload 刷新  属性 href 设置获得URL
+var btn=document.getElementById("btn");
+//绑定点击事件
+btn.onclick=function(){location.reload()}
+//获取跳转网址
+var goItcast=    document.getElementById("goItcast");
+alert(location.href)
+goItcast.onclick=function(){
+    location.href="https://www.itcast.cn"
+}
+
+</script>
+</body>
+</html>

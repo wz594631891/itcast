@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //window 可不用对象(默认本窗口对象) 可不用引用 方法(参数)
+    //弹出方法 confirm 确认取消框 alert 警告 prompt输入框
+var flag= confirm("确认退出吗")
+    alert(flag)
+    var username= prompt("请输入用户名")
+    alert(username)
+
+
+</script>
+<input type="button" id="openBtn" value="open window & baidu">
+<input type="button" id="closeBtn" value="close window & tabao">
+<script>
+
+
+
+    //打开关闭 close open()
+    var TBwindow
+var button1=document.getElementById("openBtn")
+    button1.onclick=function(){
+    open()
+         TBwindow= open("https://www.baidu.com")
+ TBwindow= open("https://www.taobao.com")
+}
+
+    var button2=document.getElementById("closeBtn")
+button2.onclick=function(){
+       // close()//window.close()
+        TBwindow.close()
+}
+</script>
+</body>
+</html>

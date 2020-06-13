@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <style>span{color:red;}p{text-align: center}
+    </style>
+</head>
+<body>
+<!--//定时器跳转首页 fun location.href=""-->
+<p ><span id="time">5</span>秒之后自动跳转首页</p>
+<script>
+
+    //五秒后跳转 执行5次方法
+    var second=5
+
+    function fun(){
+       if(second==0){
+           location.href="https://www.baidu.com"
+       }
+   else{second--;
+           var time=   document.getElementById("time");
+           time.innerHTML=second+"";}
+
+    }
+//    每秒调用
+    setInterval(fun,1000)
+
+</script>
+</body>
+</html>

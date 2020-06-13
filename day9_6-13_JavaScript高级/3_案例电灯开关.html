@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--//获取对象
+//设置属性onclick-->
+<img src="img/off.gif" id="light2" alt=""  >
+<script>
+var lt=document.getElementById("light2");
+//flag 切换
+var flag=false;
+lt.onclick=function(){
+    if(flag){
+        lt.src="img/off.gif"
+    flag=false
+    }
+    else{lt.src="img/on.gif";
+    flag=true}
+}
+
+</script>
+
+</body>
+</html>

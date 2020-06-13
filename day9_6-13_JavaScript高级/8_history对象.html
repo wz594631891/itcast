@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<img src="img/banner_1.jpg" alt="" id="img">
+<script>
+
+    var number=1;
+    function fun() {
+        number++;
+        if(number>3){number =1}
+
+        var img=document.getElementsByName("img");
+        img.src="img/banner_"+number+".jpg";
+    }
+    setInterval(fun,3000)
+
+</script>
+<input type="button" id="btn" value="前进">
+<input type="button" id="btn2" value="后退">
+<input type="button" id="btn3" value="前进go">
+<input type="button" id="btn4" value="后退go">
+<script>
+    //属性 当前窗口历史记录列表对象个数
+    // 方法前进 后退 制定个数前进或后退
+    //绑定单击事件
+    var length= history.length;
+//    alert(length);
+    var btn=document.getElementById("btn")
+    btn.onclick=function(){
+        history.forward()
+    }
+    var btn2=document.getElementById("btn2")
+    btn2.onclick=function () {
+        history.back()
+    }
+    var btn3=document.getElementById("btn3")
+    btn3.onclick=function () {
+        history.go(1)
+    }
+    var btn4=document.getElementById("btn4")
+    btn4.onclick=function () {
+        history.go(-1)
+    }
+
+</script>
+</body>
+</html>

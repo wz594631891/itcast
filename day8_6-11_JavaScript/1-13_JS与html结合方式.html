@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结合方式</title>
+</head>
+<body>
+
+<!--内部方式-->
+<script>alert("hello world") /*多行
+                                注释*/
+//单行注释
+</script>
+<!--外部方式-->
+<script src="js/a.js"></script>
+<!--定义变量 口诀:sbu(w)nn 上班为年年-->
+<script>
+
+    //数字类型number 变量
+    var num1=1,num2=1.2;var num3=NaN;
+    ; document.write(num1+"<br>");
+     document.write(num2+"<br>");
+     document.write(num3+"<br>");
+    //字符串string类型
+    var str="abc";var str2='def';
+    document.write(str+str2+"<bn>");
+
+    //布尔类型
+    var flag=true;
+    document.write(flag+"<bn>");
+    //null //未定义类型
+    var obj=null;var obj2=undefined;var obj3;
+    document.write(obj+"<br>");
+    document.write(obj2+"<br>");
+    document.write(obj3+"<br>");
+
+//    typeof查看类型
+    var num1=1,num2=1.2;var num3=NaN;
+    ; document.write(num1+"-----"+typeof(num1)+"<br>");
+    document.write(num2+"-----"+typeof(num2)+"<br>");
+    document.write(num3+"-----"+typeof(num3)+"<br>");
+    //字符串string类型
+    var str="abc";var str2='def';
+    document.write(str+str2+"-----"+typeof(str)+"<bn>");
+
+    //布尔类型
+    var flag=true;
+    document.write(flag+"-----"+typeof(flag)+"<bn>");
+    //null //未定义类型
+    var obj=null;var obj2=undefined;var obj3;
+    document.write(obj+"-----"+typeof(obj)+"<br>");
+    document.write(obj2+"-----"+typeof(obj2)+"<br>");
+    document.write(obj3+"-----"+typeof(obj3)+"<br>");
+//    一元运算符 ++ -- +() -() 正负数
+    var a=1;
+    var b=a++;//先赋值在自增
+    document.write(a+"<br>");
+    document.write(b+"<br>");
+    //正负号的自动类型转换 为number 无法转为number的转为NaN
+    var num5=+"123"/*123*/,num6=+"abc",/*NaN*/num7=+true/*1*/,num8=+false,/*1*/num9=+null,/*0*/num10=+undefined;
+    document.write(num5+"<br>");
+    document.write(num6+"<br>");
+    document.write(num7+"<br>");
+    document.write(num8+"<br>");
+    document.write(num9+"<br>");
+    document.write(num10+"<br>");
+    //算术运算符 比较运算符
+    a+=1;
+    document.write(a+"<br>");
+    document.write((a+1)+"<BR>");
+    b=1;
+    document.write((a>b)+"<br>");//true
+    document.write("====="+"<br>");
+    document.write((123=="123") +"<br>");//会自动类型转换
+    document.write((123==="123") +"<br>"); //===全等于不进行类型转换
+    document.write("====="+"<br>");
+        //不同类型数据比较要先转换类型
+   var x=123;
+    document.write((x>"122")+"<br>"); //"122"-> 字面值数字 比较//true
+//逻辑运算符 && || !(类型转换) number 0和NaN 为false 2 string ""外为1;3
+  document.write("====="+"<br>");
+    if(1>2||1<2){document.write("1<2"+"<br>");}
+    if(1>2&&1<2){document.write("1>2&&1<2"+"<br>");}
+    document.write(!true+"<br>");
+//三元运算符
+    var x1=1>2?1:2;
+    document.write(x1+"<br>");
+
+    //特殊规则
+    //一行一句时候可不写;
+    //全局变量 x=1 局部变量 var x=1 作用域不同
+
+//流程控制语句
+if(1>2){}
+else{document.write("1<2"+"<br>");}
+
+while(1){document.write(1+"<br>");
+break;
+}
+switch(1){
+    case 2:
+    document.write("1=2"+"<br>");
+    break;
+    case 1:
+        document.write("1=1"+"<br>");
+        break;
+}
+
+</script>
+</body>
+</html>

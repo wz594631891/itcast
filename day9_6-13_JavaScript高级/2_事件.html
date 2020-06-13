@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--事件方法1:写在属性onclick("JS代码") 或onclick="方法()"
+
+&lt;!&ndash;<img src="img/off.gif" id="light" alt="" onclick="alert('点击了');">-->
+<img src="img/off.gif" id="light" alt="" onclick=" fun();">
+
+
+<img src="img/off.gif" id="light2" alt=""  >
+<script>function fun(){
+    var img=document.getElementById("light");
+    img.src="img/on.gif"
+}
+
+
+</script>
+
+<!--事件方法2:获取元素修改onclick 属性&ndash;&gt;-->
+<script>
+ var lt2=document.getElementById("light2")
+ lt2.onclick=fun2;
+    function fun2(){
+      alert("点我")
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+<table border="1" width="50%" cellspacing="0" cellpading="0" bgcolor="aqua" align="center">
+
+    <tr> <!-- th 单元格内容居中加粗-->
+
+        <th>编号</th>
+        <th>姓名</th>
+        <th>成绩</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>杨过</td>
+        <td>80</td>
+
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>小龙女</td>
+        <td>90</td>
+
+    </tr></table>
+    <hr>
+    <caption>学生信息表(表格标题)</caption>
+    <table border="1" width="50%" cellspacing="0" cellpading="0" bgcolor="aqua" align="center">
+
+      <thead> <tr bgcolor="fuchsia" align="center"> <!-- th 单元格内容居中加粗-->
+
+            <th >编号</th>
+            <th>姓名</th>
+            <th>成绩</th>
+        </tr></thead>
+       <tbody> <tr>
+            <td>1</td>
+            <td>杨过</td>
+            <td>80</td>
+
+        </tr></tbody>
+      <tfoot><tr>
+            <td>2</td>
+            <td>小龙女</td>
+            <td>90</td>
+
+        </tr></tfoot>
+    </table>
+<hr>
+
+<table border="1" width="50%" cellspacing="0" cellpading="0" bgcolor="aqua" align="center">
+
+    <tr bgcolor="fuchsia" align="center"> <!-- th 单元格内容居中加粗-->
+
+        <th rowspan="2">编号</th>
+        <th>姓名</th>
+        <th>成绩</th>
+    </tr>
+    <tr>
+
+        <td>杨过</td>
+        <td>80</td>
+
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>小龙女</td>
+        <td>90</td>
+
+    </tr>
+    <tr>
+        <td>3</td>
+        <td colspan="2">尹志平</td> <!-- 站两列-->
+
+
+    </tr>
+</table>
+</body>
+</html>

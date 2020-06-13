@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>body {
+        background: url("img/register_bg.png");
+        padding: 50px
+    }
+
+    .rg_layout {
+        border: solid #EEEEEE 5px;
+        margin: auto;
+        background: white;
+        height: 500px;
+        width: 900px
+    }
+
+    rg_left {
+        float: left;
+    }
+
+    rg_right {
+        float: right
+    }
+
+    #reg_1 {
+        font-size: 20px;
+        color: #FFE284
+    }
+
+    #reg_2 {
+        font-size: 20px;
+        color: grey
+    }
+    label{color:grey}
+    </style>
+</head>
+<body>
+<div class="rg_layout">
+    <div class="rg_left">
+        <div id="reg_1"><p>新用户注册</p></div>
+        <div id="reg_2"><p>USER REGISTER</p></div>
+    </div>
+    <div class="rg_center"></div>
+    <form action="#" method="get">
+        <table align="center" border="0" cellpadding="0"> <!--属性之间不空行也可以-->
+            <!--第1行-->
+            <tr>
+                <td>
+                    <lebel for="username">用户名</lebel>
+                </td>
+                <td><input type="text" id="username" name="username"
+                           placeholder="请输入账号"></td>
+            </tr>
+            <!--第2行-->
+            <tr>
+                <td>
+                    <lebel for="password"> 密码</lebel>
+                </td>
+                <td><input type="password" id="password" name="password" placeholder="请输入密码"></td>
+            </tr>
+            <!--第3行-->
+            <tr>
+                <td>
+                    <lebel for="mail">Email</lebel>
+                </td>
+                <td><input type="email" id="mail" name="email" placeholder="请输入email"></td>
+            </tr>
+            <!--第4行-->
+            <tr>
+                <td><lebel for="n">姓名</lebel></td>
+                <td><input type="text" name="name" placeholder="请输入真实姓名"></td>
+            </tr>
+            <!--第5行-->
+            <tr>
+                <td><lebel for="g">性别</lebel></td>
+                <td><input type="radio" name="gender" value="male">男 <input type="radio" name="gender" value="female">女
+                </td>
+            </tr>
+            <tr>
+                <td><lebel for="t">手机号</lebel></td>
+                <td><input type="text" name="mobilephone" placeholder="请输入手机号"></td>
+            </tr> <!--用text带起number-->
+            <!--第6行-->
+            <tr>
+                <td><lebel for="b">出生日期</lebel></td>
+                <td><input type="date" name="birthday"></td>
+            </tr>
+            <!--第7行-->
+            <tr>
+                <td><lebel for="v">验证码</lebel></td>
+                <td><input type="textarea" name="verifycode" cols="5" rows="1"> <img src="img/verify_code.jpg" alt="">
+                </td>
+            </tr>
+            <!--第8行-->
+            <!--第9行-->
+            <tr>
+                <td colspan="2" align="center" id="sub"><input type="submit" name="submit"  ></td>
+            </tr>
+        </table>
+    </form>
+    <div class="eg_right"></div>
+
+
+</div>
+</body>
+</html>
